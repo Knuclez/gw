@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=3 uid="uid://cpup0p22q4o35"]
+
+[ext_resource type="Script" path="res://GUI_auxs/scripts/invest_panel.gd" id="1_1kjn7"]
+
+[node name="invest_panel" type="Panel"]
+offset_left = 7.0
+offset_top = 6.0
+offset_right = 712.0
+offset_bottom = 179.0
+script = ExtResource("1_1kjn7")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 499.0
+offset_top = 44.0
+offset_right = 670.0
+offset_bottom = 134.0
+theme_override_font_sizes/font_size = 40
+text = "Invest"
+
+[node name="TextEdit" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 265.0
+offset_top = 41.0
+offset_right = 468.0
+offset_bottom = 130.0
+theme_override_font_sizes/font_size = 30
+placeholder_text = "Insert
+amount"
+
+[node name="ItemList" type="ItemList" parent="."]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 27.0
+offset_right = 238.0
+offset_bottom = 145.0
+item_count = 4
+item_0/text = "Piedra"
+item_1/text = "Madera"
+item_2/text = "Comida"
+item_3/text = "Oro"
+
+[connection signal="button_up" from="Button" to="." method="_on_button_up"]
+[connection signal="item_selected" from="ItemList" to="." method="_on_item_list_item_selected"]

@@ -1,0 +1,140 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0pplf0qmcn1n"]
+
+[ext_resource type="Script" path="res://scenes/scripts/core_screen.gd" id="1_bcpin"]
+
+[node name="core_screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bcpin")
+
+[node name="resources_panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 504.0
+offset_top = 23.0
+offset_right = 1122.0
+offset_bottom = 108.0
+
+[node name="stone_label" type="Label" parent="resources_panel"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 12.0
+offset_right = 142.0
+offset_bottom = 67.0
+theme_override_font_sizes/font_size = 40
+text = "0"
+
+[node name="wood_label" type="Label" parent="resources_panel"]
+layout_mode = 0
+offset_left = 171.0
+offset_top = 12.0
+offset_right = 319.0
+offset_bottom = 67.0
+theme_override_font_sizes/font_size = 40
+text = "0"
+
+[node name="food_label" type="Label" parent="resources_panel"]
+layout_mode = 0
+offset_left = 344.0
+offset_top = 14.0
+offset_right = 490.0
+offset_bottom = 74.0
+theme_override_font_sizes/font_size = 40
+text = "0"
+
+[node name="gold_label" type="Label" parent="resources_panel"]
+layout_mode = 0
+offset_left = 495.0
+offset_top = 14.0
+offset_right = 572.0
+offset_bottom = 74.0
+theme_override_font_sizes/font_size = 40
+text = "0"
+
+[node name="team_panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 25.0
+offset_right = 199.0
+offset_bottom = 97.0
+
+[node name="team_label" type="Label" parent="team_panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 40
+text = "Team:"
+
+[node name="politic_panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 993.0
+offset_top = 523.0
+offset_right = 1125.0
+offset_bottom = 624.0
+
+[node name="Label" type="Label" parent="politic_panel"]
+layout_mode = 0
+offset_left = -21.0
+offset_top = -6.0
+offset_right = 146.0
+offset_bottom = 107.0
+theme_override_font_sizes/font_size = 40
+text = "To world
+ map"
+
+[node name="gathering_panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 246.0
+offset_top = 207.0
+offset_right = 904.0
+offset_bottom = 451.0
+
+[node name="stone_button" type="Button" parent="gathering_panel"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 62.0
+offset_right = 170.0
+offset_bottom = 165.0
+theme_override_font_sizes/font_size = 40
+text = "+1
+Piedra"
+
+[node name="wood_button" type="Button" parent="gathering_panel"]
+layout_mode = 0
+offset_left = 241.0
+offset_top = 62.0
+offset_right = 397.0
+offset_bottom = 184.0
+theme_override_font_sizes/font_size = 40
+text = "+1
+Madera"
+
+[node name="Button" type="Button" parent="gathering_panel"]
+layout_mode = 0
+offset_left = 445.0
+offset_top = 66.0
+offset_right = 599.0
+offset_bottom = 184.0
+theme_override_font_sizes/font_size = 40
+text = "+1
+Comida"
+
+[node name="research_panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 508.0
+offset_right = 264.0
+offset_bottom = 632.0
+
+[node name="Button" type="Button" parent="research_panel"]
+layout_mode = 0
+offset_right = 232.0
+offset_bottom = 118.0
+theme_override_font_sizes/font_size = 40
+text = "To research
+panel"
+
+[connection signal="button_up" from="research_panel/Button" to="." method="_on_research_panel_button_up"]
