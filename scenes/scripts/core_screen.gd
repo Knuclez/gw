@@ -1,9 +1,12 @@
 extends Control
 
+@rpc('any_peer')
+func update_gui(data):
+	PlayerData.set_user_data(data)
+	player_data_changed()
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	PlayerData.data_changed.connect(player_data_changed.bind())
+	player_data_changed()
 
 func close_this_scene():
 	queue_free()
@@ -18,8 +21,16 @@ func player_data_changed():
 func _on_research_panel_button_up():
 	SceneManager.change_to_research_scene()
 
+func _on_food_button_up():
+	increase_resource.rpc_id(1, 1, Globals.food_index)
 
-#RPC to be replicated on server
+func _on_wood_button_up():
+	increase_resource.rpc_id(1, 1, Globals.wood_index)
+
+func _on_stone_button_up():
+	increase_resource.rpc_id(1, 1, Globals.stone_index)
+
+#RPC para replicar en server
 @rpc("any_peer")
-func increase_resource(resource_index : int):
+func increase_resource(add_amount: int ,resource_index: int):
 	pass

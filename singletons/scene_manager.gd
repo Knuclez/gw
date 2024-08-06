@@ -12,7 +12,6 @@ func change_to_core_scene():
 	var core_scre = load("res://scenes/core_screen.tscn").instantiate()
 	get_node("/root/main").add_child(core_scre)
 	current_scene =	core_scre
-	PlayerData.ask_server_for_data.rpc_id(1)
 
 
 func change_to_research_scene():

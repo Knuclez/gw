@@ -112,7 +112,7 @@ theme_override_font_sizes/font_size = 40
 text = "+1
 Madera"
 
-[node name="Button" type="Button" parent="gathering_panel"]
+[node name="food_button" type="Button" parent="gathering_panel"]
 layout_mode = 0
 offset_left = 445.0
 offset_top = 66.0
@@ -137,4 +137,9 @@ theme_override_font_sizes/font_size = 40
 text = "To research
 panel"
 
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[connection signal="button_up" from="gathering_panel/stone_button" to="." method="_on_stone_button_up"]
+[connection signal="button_up" from="gathering_panel/wood_button" to="." method="_on_wood_button_up"]
+[connection signal="button_up" from="gathering_panel/food_button" to="." method="_on_food_button_up"]
 [connection signal="button_up" from="research_panel/Button" to="." method="_on_research_panel_button_up"]

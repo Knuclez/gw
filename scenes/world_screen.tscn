@@ -10,3 +10,64 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ivxpk")
+
+[node name="points_panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 746.0
+offset_top = 25.0
+offset_right = 1100.0
+offset_bottom = 632.0
+
+[node name="l1" type="Label" parent="points_panel"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 26.0
+offset_right = 181.0
+offset_bottom = 81.0
+theme_override_font_sizes/font_size = 40
+text = "Team 1:"
+
+[node name="l2" type="Label" parent="points_panel"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 203.0
+offset_right = 179.0
+offset_bottom = 258.0
+theme_override_font_sizes/font_size = 40
+text = "Team 2:"
+
+[node name="l3" type="Label" parent="points_panel"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 366.0
+offset_right = 179.0
+offset_bottom = 421.0
+theme_override_font_sizes/font_size = 40
+text = "Team 3:"
+
+[node name="t1_points_label" type="Label" parent="points_panel"]
+layout_mode = 0
+offset_left = 111.0
+offset_top = 105.0
+offset_right = 226.0
+offset_bottom = 160.0
+theme_override_font_sizes/font_size = 40
+text = "10000"
+
+[node name="t2_points_label" type="Label" parent="points_panel"]
+layout_mode = 0
+offset_left = 111.0
+offset_top = 275.0
+offset_right = 226.0
+offset_bottom = 330.0
+theme_override_font_sizes/font_size = 40
+text = "10000"
+
+[node name="t3_points_label" type="Label" parent="points_panel"]
+layout_mode = 0
+offset_left = 119.0
+offset_top = 475.0
+offset_right = 234.0
+offset_bottom = 530.0
+theme_override_font_sizes/font_size = 40
+text = "10000"
