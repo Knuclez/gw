@@ -75,12 +75,12 @@ offset_top = 523.0
 offset_right = 1125.0
 offset_bottom = 624.0
 
-[node name="Label" type="Label" parent="politic_panel"]
+[node name="Button" type="Button" parent="politic_panel"]
 layout_mode = 0
-offset_left = -21.0
-offset_top = -6.0
-offset_right = 146.0
-offset_bottom = 107.0
+offset_left = -26.0
+offset_top = -4.0
+offset_right = 149.0
+offset_bottom = 114.0
 theme_override_font_sizes/font_size = 40
 text = "To world
  map"
@@ -134,11 +134,12 @@ layout_mode = 0
 offset_right = 232.0
 offset_bottom = 118.0
 theme_override_font_sizes/font_size = 40
-text = "To research
+text = "To faction
 panel"
 
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
 
+[connection signal="button_up" from="politic_panel/Button" to="." method="_on_map_button_up"]
 [connection signal="button_up" from="gathering_panel/stone_button" to="." method="_on_stone_button_up"]
 [connection signal="button_up" from="gathering_panel/wood_button" to="." method="_on_wood_button_up"]
 [connection signal="button_up" from="gathering_panel/food_button" to="." method="_on_food_button_up"]

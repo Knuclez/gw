@@ -1,5 +1,7 @@
 extends Node
 
+signal data_changed
+
 var id_db : int
 var username : String 
 
@@ -17,3 +19,10 @@ func set_user_data(data):
 	wood =  data['resources'][Globals.wood_index]
 	food =  data['resources'][Globals.food_index]
 	gold =  data['resources'][Globals.gold_index]
+
+
+@rpc('any_peer')
+func update_data(data):
+	set_user_data(data)
+
+	data_changed.emit()

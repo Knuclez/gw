@@ -19,6 +19,7 @@ config/features=PackedStringArray("4.2", "Mobile")
 SceneManager="*res://singletons/scene_manager.gd"
 PlayerData="*res://singletons/player_data.gd"
 Globals="*res://singletons/globals.gd"
+Factions="*res://singletons/factions.gd"
 
 [display]
 

@@ -70,4 +70,13 @@ offset_top = 475.0
 offset_right = 234.0
 offset_bottom = 530.0
 theme_override_font_sizes/font_size = 40
-text = "10000"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 557.0
+offset_right = 124.0
+offset_bottom = 628.0
+text = "Back"
+
+[connection signal="button_up" from="Button" to="." method="_on_back_button_up"]

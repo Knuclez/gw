@@ -3,9 +3,9 @@ extends Control
 @rpc('any_peer')
 func update_gui(data):
 	PlayerData.set_user_data(data)
-	player_data_changed()
 
 func _ready():
+	PlayerData.data_changed.connect(player_data_changed)
 	player_data_changed()
 
 func close_this_scene():
@@ -20,6 +20,9 @@ func player_data_changed():
 
 func _on_research_panel_button_up():
 	SceneManager.change_to_research_scene()
+
+func _on_map_button_up():
+	SceneManager.change_to_world_scene()
 
 func _on_food_button_up():
 	increase_resource.rpc_id(1, 1, Globals.food_index)
